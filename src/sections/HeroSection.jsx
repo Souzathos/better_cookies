@@ -1,3 +1,5 @@
+import { Star, Handshake } from 'lucide-react'
+import cookieHero from '../assets/red_veltet_nutella.png'
 import CTAButton from '../components/ui/CTAButton'
 import { WhatsAppIcon, ArrowDownIcon } from '../components/ui/icons'
 import { generateWhatsAppLink, generalOrderMessage } from '../utils/whatsapp'
@@ -72,42 +74,27 @@ export default function HeroSection() {
           className="flex-shrink-0 flex items-center justify-center w-full max-w-xs lg:max-w-sm xl:max-w-md animate-fade-in-up"
           style={{ animationDelay: '0.3s' }}
         >
-          <div className="relative w-full aspect-square max-w-[380px]">
-            {/* Outer glow ring */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-caramel/25 to-terracotta/15 scale-110 blur-2xl" />
+          <div className="relative w-full max-w-[320px] lg:max-w-[360px] mx-auto">
+            {/* Outer warm glow */}
+            <div className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-caramel/20 to-terracotta/10 blur-3xl pointer-events-none" />
 
-            {/* Middle decorative ring */}
-            <div className="absolute inset-4 rounded-full border-2 border-dashed border-caramel/20 animate-[spin_30s_linear_infinite]" />
-
-            {/* Main cookie display */}
-            <div
-              className="relative w-full h-full rounded-[2.5rem] lg:rounded-[3rem] flex items-center justify-center overflow-hidden shadow-2xl shadow-chocolate/20"
-              style={{
-                background: 'linear-gradient(145deg, #C8883C 0%, #B85C38 50%, #8B3A20 100%)',
-              }}
-            >
-              {/* Texture overlay */}
-              <div
-                className="absolute inset-0 opacity-10"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)',
-                  backgroundSize: '20px 20px',
-                }}
+            {/* Photo container */}
+            <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl shadow-chocolate/25">
+              <img
+                src={cookieHero}
+                alt="Cookie Red Velvet com Nutella — Better Cookies"
+                className="w-full h-full object-cover"
               />
-              {/* Cookie emoji — animated */}
-              <span
-                className="text-[7rem] sm:text-[8rem] relative z-10 select-none animate-float drop-shadow-2xl"
-                role="img"
-                aria-label="Cookie artesanal"
-              >
-                🍪
-              </span>
+              {/* Subtle bottom gradient so badges float over the photo */}
+              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-chocolate/15 to-transparent pointer-events-none" />
             </div>
 
             {/* Floating badge: rating */}
-            <div className="absolute -top-3 -right-4 sm:top-4 sm:right-0 lg:-right-6 bg-cream-card rounded-2xl shadow-lg shadow-chocolate/15 px-3.5 py-2.5 flex items-center gap-2 border border-warm-border/50 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
-              <span className="text-lg select-none">⭐</span>
+            <div
+              className="absolute -top-3 -right-5 bg-cream-card rounded-2xl shadow-lg shadow-chocolate/15 px-3.5 py-2.5 flex items-center gap-2 border border-warm-border/50 animate-fade-in-up"
+              style={{ animationDelay: '0.9s' }}
+            >
+              <Star size={18} strokeWidth={1.75} className="text-caramel flex-shrink-0" fill="currentColor" />
               <div>
                 <p className="text-xs font-bold text-chocolate leading-none">4.9</p>
                 <p className="text-[10px] text-chocolate/50 leading-none mt-0.5">Avaliação</p>
@@ -115,8 +102,11 @@ export default function HeroSection() {
             </div>
 
             {/* Floating badge: artisanal */}
-            <div className="absolute -bottom-3 -left-4 sm:bottom-4 sm:left-0 lg:-left-6 bg-cream-card rounded-2xl shadow-lg shadow-chocolate/15 px-3.5 py-2.5 flex items-center gap-2 border border-warm-border/50 animate-fade-in-up" style={{ animationDelay: '1.1s' }}>
-              <span className="text-lg select-none">🤲</span>
+            <div
+              className="absolute -bottom-3 -left-5 bg-cream-card rounded-2xl shadow-lg shadow-chocolate/15 px-3.5 py-2.5 flex items-center gap-2 border border-warm-border/50 animate-fade-in-up"
+              style={{ animationDelay: '1.1s' }}
+            >
+              <Handshake size={18} strokeWidth={1.75} className="text-caramel flex-shrink-0" />
               <div>
                 <p className="text-xs font-bold text-chocolate leading-none">100%</p>
                 <p className="text-[10px] text-chocolate/50 leading-none mt-0.5">Artesanal</p>
@@ -124,9 +114,9 @@ export default function HeroSection() {
             </div>
 
             {/* Decorative dots */}
-            <div className="absolute top-1/4 -left-3 w-3.5 h-3.5 rounded-full bg-caramel/50" />
-            <div className="absolute bottom-1/3 -right-2 w-2.5 h-2.5 rounded-full bg-terracotta/40" />
-            <div className="absolute top-8 left-1/3 w-2 h-2 rounded-full bg-caramel/60" />
+            <div className="absolute top-1/4 -left-4 w-3.5 h-3.5 rounded-full bg-caramel/50 pointer-events-none" />
+            <div className="absolute top-1/2 -right-3 w-2.5 h-2.5 rounded-full bg-terracotta/40 pointer-events-none" />
+            <div className="absolute top-12 left-1/3 w-2 h-2 rounded-full bg-caramel/60 pointer-events-none" />
           </div>
         </div>
       </div>

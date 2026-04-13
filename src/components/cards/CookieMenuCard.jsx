@@ -1,3 +1,4 @@
+import { ShoppingBag } from 'lucide-react'
 import { generateWhatsAppLink, cookieOrderMessage } from '../../utils/whatsapp'
 
 const textureStyle = {
@@ -56,6 +57,7 @@ export default function CookieMenuCard({ cookie }) {
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-1.5 bg-transparent border border-warm-border text-chocolate/70 hover:bg-caramel hover:text-white hover:border-caramel text-xs font-semibold py-2 px-4 rounded-xl transition-all duration-200 active:scale-95"
         >
+          <ShoppingBag size={12} strokeWidth={2} />
           Quero esse!
         </a>
       </div>

@@ -1,3 +1,4 @@
+import logo from '../../assets/logo.jpg'
 import { WhatsAppIcon, InstagramIcon } from '../ui/icons'
 import { generateWhatsAppLink, generalOrderMessage } from '../../utils/whatsapp'
 import { siteConfig } from '../../data/siteConfig'
@@ -11,8 +12,12 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
           {/* Brand */}
           <div className="text-center md:text-left max-w-xs">
-            <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
-              <span className="text-3xl select-none">🍪</span>
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+              <img
+                src={logo}
+                alt="Better Cookies"
+                className="h-12 w-12 rounded-full object-cover flex-shrink-0 ring-2 ring-caramel/30"
+              />
               <h3 className="font-serif text-2xl text-cream">{siteConfig.name}</h3>
             </div>
             <p className="text-sm leading-relaxed text-cream/55">

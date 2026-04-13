@@ -1,3 +1,4 @@
+import logo from '../assets/logo.jpg'
 import SectionHeader from '../components/ui/SectionHeader'
 import { ArrowRightIcon, InstagramIcon } from '../components/ui/icons'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
@@ -88,7 +89,13 @@ export default function BrandStorySection() {
                 />
 
                 <div className="relative z-10">
-                  <div className="text-7xl mb-5 select-none">🍪</div>
+                  <div className="flex justify-center mb-6">
+                    <img
+                      src={logo}
+                      alt="Better Cookies"
+                      className="h-32 w-32 rounded-full object-cover shadow-2xl shadow-black/40 ring-4 ring-caramel/25"
+                    />
+                  </div>
                   <p className="font-serif text-3xl text-cream mb-2">
                     {siteConfig.name}
                   </p>

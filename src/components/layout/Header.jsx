@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import logo from '../../assets/logo.jpg'
 import CTAButton from '../ui/CTAButton'
 import { WhatsAppIcon, MenuIcon, CloseIcon } from '../ui/icons'
 import { generateWhatsAppLink, generalOrderMessage } from '../../utils/whatsapp'
@@ -33,7 +34,11 @@ export default function Header() {
           className="font-serif text-xl text-chocolate hover:text-caramel transition-colors flex items-center gap-2"
           aria-label="Better Cookies — Início"
         >
-          <span className="text-2xl select-none">🍪</span>
+          <img
+            src={logo}
+            alt="Better Cookies"
+            className="h-9 w-9 rounded-full object-cover flex-shrink-0"
+          />
           <span className="font-bold tracking-tight">Better Cookies</span>
         </a>
 

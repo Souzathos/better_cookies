@@ -1,3 +1,4 @@
+import { Clock, Cookie, Heart } from 'lucide-react'
 import CTAButton from '../components/ui/CTAButton'
 import { WhatsAppIcon } from '../components/ui/icons'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
@@ -50,9 +51,22 @@ export default function FinalCTASection() {
           Pedir agora pelo WhatsApp
         </CTAButton>
 
-        <p className="mt-6 text-white/40 text-xs tracking-wide">
-          Atendimento rápido · Cookies fresquinhos · Feitos com amor
-        </p>
+        <div className="mt-6 flex items-center justify-center gap-5 text-white/40 text-xs flex-wrap">
+          <span className="flex items-center gap-1.5">
+            <Clock size={13} strokeWidth={1.75} />
+            Atendimento rápido
+          </span>
+          <span className="text-white/20">·</span>
+          <span className="flex items-center gap-1.5">
+            <Cookie size={13} strokeWidth={1.75} />
+            Cookies fresquinhos
+          </span>
+          <span className="text-white/20">·</span>
+          <span className="flex items-center gap-1.5">
+            <Heart size={13} strokeWidth={1.75} />
+            Feitos com amor
+          </span>
+        </div>
       </div>
     </section>
   )

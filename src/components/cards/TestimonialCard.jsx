@@ -1,3 +1,5 @@
+import { Star } from 'lucide-react'
+
 const avatarGradients = [
   'from-caramel to-terracotta',
   'from-chocolate to-chocolate-dark',
@@ -20,10 +22,16 @@ export default function TestimonialCard({ testimonial, index = 0 }) {
         {testimonial.text}
       </p>
 
-      {/* Stars */}
+      {/* Stars — lucide filled */}
       <div className="flex gap-0.5 mb-4">
         {Array.from({ length: testimonial.rating }).map((_, i) => (
-          <span key={i} className="text-caramel text-sm">★</span>
+          <Star
+            key={i}
+            size={13}
+            strokeWidth={1.5}
+            className="text-caramel"
+            fill="currentColor"
+          />
         ))}
       </div>
 

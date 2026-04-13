@@ -1,4 +1,4 @@
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/logo.png'
 import { WhatsAppIcon, InstagramIcon } from '../ui/icons'
 import { generateWhatsAppLink, generalOrderMessage } from '../../utils/whatsapp'
 import { siteConfig } from '../../data/siteConfig'

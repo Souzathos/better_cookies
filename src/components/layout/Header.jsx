@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/logo.png'
 import CTAButton from '../ui/CTAButton'
 import { WhatsAppIcon, MenuIcon, CloseIcon } from '../ui/icons'
 import { generateWhatsAppLink, generalOrderMessage } from '../../utils/whatsapp'

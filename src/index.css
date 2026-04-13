@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-chocolate font-sans antialiased;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-alt;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-caramel/50 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-caramel;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar but keep scroll functionality (for cookie cards on mobile) */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Text shadow for hero */
+  .text-shadow {
+    text-shadow: 0 2px 12px rgba(60, 36, 21, 0.15);
+  }
+}

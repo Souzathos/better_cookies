@@ -1,0 +1,33 @@
+import { useEffect, useRef, useState } from 'react'
+
+/**
+ * Returns a ref and a boolean `isVisible` that becomes true when
+ * the element enters the viewport. Once visible, it stays visible.
+ */
+export function useScrollAnimation(options = {}) {
+  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.unobserve(element)
+        }
+      },
+      {
+        threshold: options.threshold ?? 0.1,
+        rootMargin: options.rootMargin ?? '0px 0px -40px 0px',
+      }
+    )
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [])
+
+  return { ref, isVisible }
+}
